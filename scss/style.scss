@@ -1,0 +1,101 @@
+@import "node_modules/normalize-scss/sass/normalize";
+
+@import "scss/bourbon/bourbon";
+@import "neat/neat-helpers";
+@import "scss/grid-settings";
+@import "scss/neat/neat";
+
+@include normalize();
+
+* {
+    font-family:'Libre Baskerville', serif;
+    color: white;
+}
+
+body {
+    background: #231F20;     
+    font-size: 16px;
+}
+
+h1 {
+    line-height: 1.2;
+    font-style: italic;
+    letter-spacing: .02em;
+    margin: 0;
+    padding-left: 10px;
+    @include media($mobile) {
+        font-size: 400%;
+    }
+    @include media($tablet) {
+        font-size: 500%;
+    }
+    @include media($laptop) {
+        font-size: 735%;
+    }
+    @include media($desktop) {
+        font-size: 870%;
+    }
+}
+
+h2 {
+    margin: 0;
+    color: #999;
+    @include media($mobile) {
+        font-size: 200%;
+    }
+    @include media($tablet) {
+        font-size: 340%;
+    }
+    @include media($desktop) {
+        font-size: 400%;
+    }
+}
+
+ul {
+    padding-left: 1.3em;
+}
+
+ul, li {
+    list-style: none;
+    @include media($tablet) {
+        list-style: disc;
+    }
+}
+
+li {
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+#container {
+    @include outer-container;
+}
+
+#placeholder {
+    text-align: center;
+    padding: 10px;
+    margin-top: 100px;
+    @include media($mobile) {
+        @include span-columns(4);
+    }
+    @include media($mobile-landscape) {
+        margin-top: 10%;
+    }
+    @include media($tablet) {
+        @include span-columns(6);
+        @include shift(1);
+        text-align: left;
+        border: 1px solid #999;
+        border-left: 0;
+        border-right: 0;
+    }
+    @include media($laptop) {
+        @include span-columns(6);
+        @include shift(3);
+    }
+}
+

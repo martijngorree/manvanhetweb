@@ -1,0 +1,10 @@
+$column: 90px;
+$gutter: 10px;
+$grid-columns: 12;
+$max-width: 1200px;
+$desktop: new-breakpoint(min-width 1025px 16);
+$laptop: new-breakpoint(min-width 769px 12);
+$tablet-landscape: new-breakpoint(min-width 480px min-height 700px 8);
+$tablet: new-breakpoint(min-width 480px min-height 481px 8);
+$mobile-landscape: new-breakpoint(min-width 600px min-height 300px 4);
+$mobile: new-breakpoint(max-width 479px 4);
