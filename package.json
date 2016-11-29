@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "bourbon-neat": "^1.8.0",
+    "copyfiles": "^1.0.0",
     "nodemon": "^1.10.2",
     "pug": "^2.0.0-beta6"
   },
@@ -16,7 +17,8 @@
     "watch": "npm run watch:all",
     "build:pug": "pug *.pug --out build/",
     "build:scss": "sassc -mt compressed scss/style.scss build/stylesheets/style.css",
-    "watch:all": "nodemon -e scss,pug --exec \"npm run build:scss && npm run build:pug\" --ignore node_modules/ --ignore bower_components/ --ignore build/"
+    "copy:assets": "cp -r assets/* build/assets/",
+    "watch:all": "nodemon -e scss,pug --exec \"npm run build:scss && npm run build:pug && npm run copy:assets\" --ignore node_modules/ --ignore bower_components/ --ignore build/ --ignore assets/"
   },
   "author": "",
   "license": "ISC"
