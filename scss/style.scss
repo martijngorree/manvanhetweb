@@ -1,9 +1,9 @@
-@import "node_modules/normalize-scss/sass/normalize";
+@import "normalize-scss/sass/normalize";
 
-@import "scss/bourbon/bourbon";
+@import "bourbon/bourbon";
 @import "neat/neat-helpers";
-@import "scss/grid-settings";
-@import "scss/neat/neat";
+@import "grid-settings";
+@import "neat/neat";
 
 @include normalize();
 
